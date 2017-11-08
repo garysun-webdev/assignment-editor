@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Global Resizer styles */
+
+.Resizer {
+  background-color: #eee;
+  opacity: 0.2;
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer::after {
+  content: '•';
+  color: black;
+  font-size: 2em;
+}
+
+.Resizer.vertical {
+  min-width: 27px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.Resizer.vertical:hover,
+.Resizer.vertical:active,
+.Resizer.vertical:focus {
+  background-color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.54);
+  cursor: grab;
+}
+
+.Resizer.verfical:focus {
+  cursor: grabbing;
+}
+
+.Resizer.disabled {
+  cursor: not-allowed;
+}
+.Resizer.disabled:hover {
+  border-color: transparent;
+}
+
+.SplitPane--snap .Pane1 {
+  transition: width 0.3s ease-in-out;
+}
+
+.Pane.Pane2 {
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: white;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.09), 0 1px 2px 0 rgba(0,0,0,0.36);
+  margin-left: -27px;
+}
+
+.Pane.Pane1 {
+  overflow: auto;
+}
+
+/* Paper style */
+
+.Paper {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+
+  margin: auto;
+  outline: 0;
+  max-width: 693px;
+  min-width: 216px;
+  padding: 63px 36px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  strong {
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul, ol {
+    padding-left: 36px;
+  }
+
+  [data-slate-editor="true"] > div {
+    padding-bottom: 18px;
+  }
+
+  p, div {
+    font-size: 1em;
+  }
+
+  h1 {
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+
+  h2 {
+    margin: 24px 0px;
+  }
+
+  h3 {
+    margin: 24px 0px;
+  }
+
+  h4, h5, h6, h7 {
+    color: inherit;
+    margin: 24px 0px;
+  }
+}
+
+/* Slate editor styles */
+
+[data-slate-editor="true"] > div {
+  margin-bottom: 18px;
+  line-height: 21px;
+}
+
+[data-slate-editor="true"] > h1 {
+  margin-bottom: 27px;
+}

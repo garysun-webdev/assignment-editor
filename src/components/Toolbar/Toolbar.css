@@ -1,0 +1,22 @@
+.Toolbar {
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.09), 0 9px 18px 0 rgba(0,0,0,0.18);
+  height: 39px;
+  background-color: #fafafa;
+  z-index: 400;
+  width: 100%;
+  display: flex;
+  user-select: none;
+  justify-content: space-between;
+}
+
+.Toolbar-materials {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.Toolbar-configuration {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}

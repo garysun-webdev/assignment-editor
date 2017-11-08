@@ -1,0 +1,14 @@
+.Titlebar {
+  height: 60px;                 /* shelf titlebar height */
+  background: linear-gradient(to right, #5100f5 0%, #aa00ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 400;
+  color: white;
+}
+
+.Titlebar-title {
+  padding: 0px 18px;
+  font-size: 1.5em;
+}

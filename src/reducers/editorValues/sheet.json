@@ -1,0 +1,62 @@
+{
+  "document": {
+    "nodes": [
+      {
+        "kind": "block",
+        "type": "heading-two",
+        "nodes": [
+          {
+            "kind": "text",
+            "leaves": [
+              {
+                "text": "Astronomy 101: Assignment 1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "kind": "text",
+            "leaves": [
+              {
+                "text": "There is a lot of exciting stuff going on in the stars above us that makeastronomy so much fun. The truth is the universe is a constantly changing, moving, some would say 'living' thing because you just never know what you are going to see on any given night of stargazing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "kind": "text",
+            "leaves": [
+              {
+                "text": "But of the many celestial phenomenons, there is probably none as exciting as that time you see your first asteroid on the move in the heavens. To call asteroids the “rock stars” of astronomy is simultaneously a bad joke but an accurate depiction of how astronomy fans view them. Unlike suns, planets and moons, asteroids are on the move, ever changing and, if they appear in the night sky, exciting and dynamic."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "kind": "text",
+            "leaves": [
+              {
+                "text": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
