@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 
 import Instructions from '../components/Instructions';
+import { resClick } from '../actions/manifestActions';
+
 
 function mapStateToProps(state) {
   return {
@@ -9,4 +11,5 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Instructions);
+
+export default connect(mapStateToProps,{resClick})(Instructions);

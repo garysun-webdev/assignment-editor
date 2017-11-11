@@ -4,7 +4,10 @@ import Types from 'slate-prop-types';
 import { Editor } from 'slate-react';
 
 import Requirements from '../Requirements';
+import ResourceItem from '../ResourceItem';
 import plugins from '../../utils/slate/plugins';
+
+
 
 function Instructions(props) {
   return (
@@ -26,9 +29,7 @@ function Instructions(props) {
       <ul>
       {
         props.sheet.resources.map(r => (
-          <li key={r.name}>
-            {r.name} - {r.url}
-          </li>
+          <ResourceItem key={r.name} name={r.name} url={r.url} openDate={r.openDate} resClick={props.resClick}/>
         ))
       }
       </ul>
@@ -45,6 +46,7 @@ Instructions.propTypes = {
     resources: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
+      openDate: PropTypes.string.isRequired
     })).isRequired,
   }).isRequired,
   editorValue: Types.value.isRequired,

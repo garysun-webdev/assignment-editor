@@ -1,6 +1,27 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
+import RelativeDate from '../RelativeDate';
+
+function getRelativeDate(dateString){
+  
+  const dueDate = Date.parse(dateString);
+  const interval = (dueDate - Date.now())/1000;
+  
+  var day = parseInt(interval / 3600 / 24); 
+  var hour = parseInt((interval - day * 24 * 3600) / 3600);
+  var min = parseInt((interval - day * 24 * 3600 - hour * 3600) / 60);
+  
+  if (interval < 0) {
+        hour = 0 - hour;
+        min = 0 - min;
+  }
+
+  const relativeDate = `${day} day ${hour} hour ${min} min left`
+  return relativeDate;
+}
+
+
 
 function Requirements(props) {
   const {
@@ -19,6 +40,7 @@ function Requirements(props) {
           <li>
             <strong>Due Date: </strong>
             <u>{dueDate}.</u>
+            <RelativeDate dueDateString={dueDate}/>
           </li>
         }
 

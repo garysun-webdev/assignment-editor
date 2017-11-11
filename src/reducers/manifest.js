@@ -1,4 +1,5 @@
 // Manifest store reducers
+import { RES_CLICK } from '../actions/manifestActions';
 
 const initialState = {
   status: 'editing',
@@ -12,8 +13,12 @@ const initialState = {
     wordLimit: 1000,
     gradeValue: 30,
     resources: [
-      { name: 'Hacker News', url: 'https://news.ycombinator.com' },
-      { name: 'Wikipedia', url: 'https://www.wikipedia.com' },
+      { name: 'Hacker News', url: 'https://news.ycombinator.com', openDate: ''},
+      { name: 'Wikipedia', url: 'https://www.wikipedia.com', openDate: ''},
+      { name: 'Google', url: 'https://www.google.com.uk', openDate: ''},
+      { name: 'Facebook', url: 'https://www.facebook.com', openDate: ''},
+      { name: 'Twitter', url: 'https://www.twitter.com', openDate: ''},
+      { name: 'Instagram', url: 'https://www.nstagram.com', openDate: ''},
       // Add more fake resources here
     ],
   },
@@ -29,6 +34,25 @@ const initialState = {
  * However, if you want to have actions to update the Manifest state, you
  * should add reducing functionality below.
  */
+
 export default function manifest(state = initialState, action) {
-  return state;
+  switch(action.type) {
+    case RES_CLICK: {
+      return {
+        ...state,
+        sheet: {
+          ...state.sheet,
+          resources: [
+            ...state.sheet.resources.filter( r => r.name !== action.resource.name),
+            Object.assign({}, action.resource)
+          ]
+        }
+      }
+    }
+
+    default: {
+      return state;
+    }
+  }
 }
+  
