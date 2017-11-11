@@ -7,8 +7,6 @@ import Requirements from '../Requirements';
 import ResourceItem from '../ResourceItem';
 import plugins from '../../utils/slate/plugins';
 
-
-
 function Instructions(props) {
   return (
     <div className="Instructions Paper">

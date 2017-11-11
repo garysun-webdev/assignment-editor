@@ -52,6 +52,9 @@ class Titlebar extends Component {
         <div className="Titlebar-title">
           {this.props.title}
         </div>
+        <div>
+          {this.props.wordCount}
+        </div>
         <div className="Titlebar-actions">
           <RaisedButton
             label="Cloud Save"

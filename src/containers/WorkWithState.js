@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { editorsChange } from '../actions/editorsActions';
+import { editorsChange, wordCountUpdate } from '../actions/editorsActions';
 import Work from '../components/Work';
 
 function mapStateToProps(state) {
@@ -14,6 +14,9 @@ function mapDispatchToProps(dispatch) {
     onChange: (change) => {
       dispatch(editorsChange('body', change));
     },
+    onWordChange: (wordCount)=> {
+      dispatch(wordCountUpdate(wordCount));
+    }
   };
 }
 

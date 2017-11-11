@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SplitPane from 'react-split-pane';
 
-import Materials from '../Materials';
+import MaterialsWithState from '../../containers/MaterialsWithState';
 import WorkWithState from '../../containers/WorkWithState';
 
 import './Desk.css';
@@ -83,7 +83,7 @@ class DeskEditing extends Component {
           onChange={this.handleDrag}
           onDragFinished={this.handleDragEnd}
         >
-          <Materials />
+          <MaterialsWithState />
           <WorkWithState />
         </SplitPane>
       </div>

@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 import { pathConfig } from '../../utils/routeConfig';
 
-import Toolbar from '../Toolbar';
+import ToolbarWithState from '../../containers/ToolbarWithState';
 import TitlebarWithTitle from '../../containers/TitlebarWithTitle';
 
 import './Shelf.css';
@@ -15,7 +15,7 @@ function Shelf() {
         path={pathConfig.submissionEditing}
         component={TitlebarWithTitle}
       />
-      <Toolbar />
+      <ToolbarWithState />
     </div>
   );
 }

@@ -5,12 +5,12 @@ import ActionAspectRatio from 'material-ui/svg-icons/action/aspect-ratio';
 
 import './Toolbar.css';
 
-export default function Toolbar() {
+function Toolbar({tagSwitch,currentTag}) {
   return (
     <div className="Toolbar">
       <div className="Toolbar-materials">
-        <FlatButton label="Instructions" primary />
-        <FlatButton label="Notes" disabled={true} />
+        <FlatButton label="Instructions" onClick={()=>tagSwitch(0)} primary={currentTag==0} />
+        <FlatButton label="Progress" onClick={()=>tagSwitch(1)} primary={currentTag==1} /> 
       </div>
       <div className="Toolbar-configuration">
         <IconButton>
@@ -20,3 +20,5 @@ export default function Toolbar() {
     </div>
   );
 }
+
+export default Toolbar;
