@@ -1,7 +1,8 @@
-import { TAG_SWITCH } from '../actions/configActions';
+import { TAG_SWITCH, SIZE_CHANGE } from '../actions/configActions';
 
 const initialState = {
-  currentTag: 0
+  currentTag: 0,
+  materialsPaneSize: 400
 };
 
 export default function config(state = initialState, action){
@@ -12,8 +13,13 @@ export default function config(state = initialState, action){
         currentTag: action.tagId
       }
 
+    case SIZE_CHANGE:
+      return {
+        ...state,
+        materialsPaneSize: action.paneSize
+      }
+
     default: 
       return state;
-    
   }
 }

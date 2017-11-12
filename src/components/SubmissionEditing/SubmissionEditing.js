@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Shelf from '../Shelf';
-import { DeskEditing } from '../Desk';
+import DeskWithState from '../../containers/DeskWithState';
 
 function SubmissionEditing() {
   return (
     <div className="Shelf">
       <Shelf />
-      <DeskEditing />
+      <DeskWithState />
     </div>
   );
 }

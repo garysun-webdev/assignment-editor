@@ -11,10 +11,9 @@ class DeskEditing extends Component {
     super(props);
 
     this.state = {
-      materialsPaneSize: 400,
       workPaneSize: 800,
       containerWidth: 0,
-      paneCls: '',
+      paneCls: ''
     };
 
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -35,7 +34,7 @@ class DeskEditing extends Component {
     const containerWidth = this.containerEl.clientWidth;
     this.setState({
       containerWidth,
-      workPaneSize: containerWidth - this.state.materialsPaneSize,
+      workPaneSize: containerWidth - this.props.materialsPaneSize,
     });
   }
 
@@ -55,13 +54,13 @@ class DeskEditing extends Component {
 
   handleDrag(width) {
     if (width <= 180) {
+      this.props.sizeChange(1);
       this.setState({
-        materialsPaneSize: 1,
         workPaneSize: this.state.containerWidth - 1,
       });
     } else {
+      this.props.sizeChange(width);
       this.setState({
-        materialsPaneSize: width,
         workPaneSize: this.state.containerWidth - width,
       });
     }
@@ -79,7 +78,7 @@ class DeskEditing extends Component {
           split="vertical"
           maxSize={-45}
           minSize={0}
-          size={this.state.materialsPaneSize}
+          size={this.props.materialsPaneSize}
           onChange={this.handleDrag}
           onDragFinished={this.handleDragEnd}
         >

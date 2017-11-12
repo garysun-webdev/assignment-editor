@@ -32,7 +32,7 @@ class RelativeDate extends Component {
     
     if(this.state.interval===""){
       return(
-        <p>Loading...</p>
+        <div>Loading...</div>
       )
     }
 
