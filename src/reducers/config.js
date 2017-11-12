@@ -6,15 +6,14 @@ const initialState = {
 
 export default function config(state = initialState, action){
   switch(action.type){
-    case TAG_SWITCH: {
+    case TAG_SWITCH: 
       return {
         ...state,
         currentTag: action.tagId
       }
-    };
 
-    default: {
+    default: 
       return state;
-    }
+    
   }
 }

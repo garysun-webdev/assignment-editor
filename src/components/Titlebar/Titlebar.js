@@ -28,6 +28,16 @@ class Titlebar extends Component {
     this.handleRequestClose = this.handleRequestClose.bind(this);
   }
 
+  componentDidMount(){
+      this.intervalHandle = setInterval ( () => {
+      this.props.countListUpdate(this.props.wordCount)
+    },5000 )
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.intervalHandle);
+  }
+
   handleCloudSave() {
     this.setState({
       open: true,
@@ -53,6 +63,7 @@ class Titlebar extends Component {
           {this.props.title}
         </div>
         <div>
+          <label>current wordcount is </label>
           {this.props.wordCount}
         </div>
         <div className="Titlebar-actions">

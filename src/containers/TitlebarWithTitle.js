@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import Titlebar from '../components/Titlebar';
+import { countListUpdate } from '../actions/countActions';
 
 function mapStateToProps(state) {
   return {
@@ -9,4 +10,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Titlebar);
+export default connect(mapStateToProps, {countListUpdate})(Titlebar);

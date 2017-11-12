@@ -34,6 +34,6 @@ export default function editors(state = initialState, action) {
         wordCount: action.wordCount 
       };
     default:
-      return state;
+      return state
   }
 }

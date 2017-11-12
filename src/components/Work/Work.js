@@ -19,12 +19,14 @@ class Work extends Component {
 
   componentDidMount(){
     this.updateWordCount();
+
   }
 
   updateWordCount(){
     const words = this.props.editorValue._map._root.entries[1][1].text;
     const wordList = words.trim().split(" ");
-    this.props.onWordChange(wordList.length);
+    const wordCount = wordList.length-1;
+    this.props.onWordChange(wordCount);
   }
 
   static propTypes = {

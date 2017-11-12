@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import manifest from './manifest';
 import editors from './editors';
 import config from './config';
+import count from './count';
 
 /**
  * Root redux reducer.
@@ -46,7 +47,8 @@ import config from './config';
 const rootReducer = combineReducers({
   manifest,
   editors,
-  config
+  config,
+  count
 });
 
 export default rootReducer;

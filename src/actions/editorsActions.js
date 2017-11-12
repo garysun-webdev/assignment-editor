@@ -18,5 +18,3 @@ export function wordCountUpdate(wordCount) {
   };
 }
 
-
-

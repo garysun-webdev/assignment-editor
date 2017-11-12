@@ -6,7 +6,7 @@ import InstructionsWithState from '../../containers/InstructionsWithState';
 import ProgressWithState from '../../containers/ProgressWithState';
 
 function Materials({currentTag}) {
-  if(currentTag==0){
+  if(currentTag===0){
     return (
       <div className="Materials">
         <InstructionsWithState />
@@ -14,7 +14,7 @@ function Materials({currentTag}) {
     );  
   }
 
-  if(currentTag==1){
+  if(currentTag===1){
     return (
       <div className="Materials">
         <ProgressWithState />

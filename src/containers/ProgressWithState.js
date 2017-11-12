@@ -4,8 +4,10 @@ import Progress from '../components/Progress';
 
 function mapStateToProps(state) {
   return {
-    sheet: state.manifest.sheet,
-    editorValue: state.editors.sheet,
+    countData: state.count,
+    wordLimit: state.manifest.sheet.wordLimit,
+    wordCount: state.editors.wordCount,
+    dueDate: state.manifest.sheet.dueDate
   };
 }
 

@@ -14,7 +14,7 @@ function mapDispatchToProps(dispatch) {
     onChange: (change) => {
       dispatch(editorsChange('body', change));
     },
-    onWordChange: (wordCount)=> {
+    onWordChange: (wordCount) => {
       dispatch(wordCountUpdate(wordCount));
     }
   };

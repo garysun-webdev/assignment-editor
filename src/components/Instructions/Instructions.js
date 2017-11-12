@@ -43,8 +43,7 @@ Instructions.propTypes = {
     gradeValue: PropTypes.number,
     resources: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
-      openDate: PropTypes.string.isRequired
+      url: PropTypes.string.isRequired
     })).isRequired,
   }).isRequired,
   editorValue: Types.value.isRequired,

@@ -9,8 +9,8 @@ function Toolbar({tagSwitch,currentTag}) {
   return (
     <div className="Toolbar">
       <div className="Toolbar-materials">
-        <FlatButton label="Instructions" onClick={()=>tagSwitch(0)} primary={currentTag==0} />
-        <FlatButton label="Progress" onClick={()=>tagSwitch(1)} primary={currentTag==1} /> 
+        <FlatButton label="Instructions" onClick={()=>tagSwitch(0)} primary={currentTag===0} />
+        <FlatButton label="Progress" onClick={()=>tagSwitch(1)} primary={currentTag===1} /> 
       </div>
       <div className="Toolbar-configuration">
         <IconButton>
