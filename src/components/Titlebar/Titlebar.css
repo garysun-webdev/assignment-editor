@@ -8,7 +8,20 @@
   color: white;
 }
 
+.Titlebar-wordcount {
+  margin-left: auto;
+  margin-right: 12px;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.Titlebar-wordcount > label {
+  font-size: 0.625em;
+  margin-right: 4px;
+}
 .Titlebar-title {
   padding: 0px 18px;
   font-size: 1.5em;
 }
+
+

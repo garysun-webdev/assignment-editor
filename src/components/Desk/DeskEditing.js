@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SplitPane from 'react-split-pane';
 
 import MaterialsWithState from '../../containers/MaterialsWithState';
@@ -19,6 +20,11 @@ class DeskEditing extends Component {
     this.updateDimensions = this.updateDimensions.bind(this);
     this.handleDragEnd = this.handleDragEnd.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
+  }
+
+  static propTypes = {
+    sizeChange: PropTypes.func.isRequired,
+    materialsPaneSize: PropTypes.number.isRequired
   }
 
   componentDidMount() {

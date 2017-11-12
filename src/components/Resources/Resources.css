@@ -1,0 +1,40 @@
+.Resources > ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.Resources > ul > li {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    border-top: 1px solid #cccccc;
+    /*cursor: pointer;*/
+}
+
+.Resources > ul > li:last-child {
+    border-bottom: 1px solid #cccccc;
+}
+
+.Resources > ul > li > svg:first-of-type {
+    flex: 0 0 auto;
+    margin-right: 0.5em;
+}
+
+.Resources > ul > li > svg:last-of-type {
+    display: none !important;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.Resources > ul > li:hover > svg:last-of-type {
+    display: inline-block !important
+}
+
+.Resources > ul > li label {
+    font-size: 0.75rem;
+}
+
+.Resources a {
+    color: black; text-decoration: none;    
+}

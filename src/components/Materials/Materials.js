@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import './Materials.css';
 
 import InstructionsWithState from '../../containers/InstructionsWithState';
@@ -24,4 +24,9 @@ function Materials({currentTag}) {
   
 }
 
+Materials.propTypes = {
+  currentTag: PropTypes.number.isRequired
+};
+
 export default Materials;
+

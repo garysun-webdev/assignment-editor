@@ -4,8 +4,9 @@ import Types from 'slate-prop-types';
 import { Editor } from 'slate-react';
 
 import Requirements from '../Requirements';
-import ResourceItem from '../ResourceItem';
+import Resources from '../Resources';
 import plugins from '../../utils/slate/plugins';
+import './Instructions.css';
 
 function Instructions(props) {
   return (
@@ -23,19 +24,13 @@ function Instructions(props) {
         onChange={() => {}}
         readOnly
       />
-      <h2>Resources</h2>
-      <ul>
-      {
-        props.sheet.resources.map(r => (
-          <ResourceItem key={r.name} name={r.name} url={r.url} openDate={r.openDate} resClick={props.resClick}/>
-        ))
-      }
-      </ul>
+       <Resources resources={props.sheet.resources} resClick={props.resClick} />
     </div>
   );
 }
 
 Instructions.propTypes = {
+  resClick: PropTypes.func.isRequired,
   sheet: PropTypes.shape({
     dueDate: PropTypes.string,
     draftDueDate: PropTypes.string,
@@ -43,7 +38,8 @@ Instructions.propTypes = {
     gradeValue: PropTypes.number,
     resources: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired
+      url: PropTypes.string.isRequired,
+      openDate: PropTypes.number.isRequired,
     })).isRequired,
   }).isRequired,
   editorValue: Types.value.isRequired,

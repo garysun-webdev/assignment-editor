@@ -20,6 +20,7 @@ class Work extends Component {
   static propTypes = {
     editorValue: Types.value.isRequired,
     onChange: PropTypes.func.isRequired,
+    onWordChange: PropTypes.func.isRequired
   }
 
   componentDidMount(){

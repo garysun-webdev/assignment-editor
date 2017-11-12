@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class RelativeDate extends Component {
   constructor() {
     super();
     this.state = { interval:"" };
+  }
+  static propTypes = {
+    dueDateString: PropTypes.string.isRequired
   }
 
   componentDidMount(){
@@ -21,10 +25,13 @@ class RelativeDate extends Component {
   setTimeFormat() {
     const { interval } = this.state;
     const day = parseInt(interval / 3600 / 24); 
-    const hour = parseInt((interval - day * 24 * 3600) / 3600);
-    const min = parseInt((interval - day * 24 * 3600 - hour * 3600) / 60);
-
-    const relativeDate = `${day} day ${hour} hour ${min} min left`;
+    let hour = parseInt((interval - day * 24 * 3600) / 3600);
+    let min = parseInt((interval - day * 24 * 3600 - hour * 3600) / 60);
+    if(interval<0){
+      hour = -hour;
+      min = -min;
+    }
+    const relativeDate = `${day} day ${hour} hour ${min} min`;
     return relativeDate;
   }
 
@@ -32,12 +39,12 @@ class RelativeDate extends Component {
     
     if(this.state.interval===""){
       return(
-        <div>Loading...</div>
+        <em>Loading...</em>        
       )
     }
 
     return(
-      <div>{this.setTimeFormat()}</div>
+      <em>{this.setTimeFormat()}</em>
     )
   }
 }

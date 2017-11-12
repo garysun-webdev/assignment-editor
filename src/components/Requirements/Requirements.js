@@ -1,27 +1,9 @@
-// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import RelativeDate from '../RelativeDate';
+import moment from 'moment';
 
-// function getRelativeDate(dateString){
-  
-//   const dueDate = Date.parse(dateString);
-//   const interval = (dueDate - Date.now())/1000;
-  
-//   var day = parseInt(interval / 3600 / 24); 
-//   var hour = parseInt((interval - day * 24 * 3600) / 3600);
-//   var min = parseInt((interval - day * 24 * 3600 - hour * 3600) / 60);
-  
-//   if (interval < 0) {
-//         hour = 0 - hour;
-//         min = 0 - min;
-//   }
-
-//   const relativeDate = `${day} day ${hour} hour ${min} min left`
-//   return relativeDate;
-// }
-
-
+import './Requirements.css';
 
 function Requirements(props) {
   const {
@@ -34,13 +16,20 @@ function Requirements(props) {
   return (
     <div className="Requirements">
       <h2>Requirements</h2>
-      <ol>
+      <ul>
         { !dueDate ?
           null :
           <li>
             <strong>Due Date: </strong>
-            <u>{dueDate}.</u>
-            <RelativeDate dueDateString={dueDate}/>
+            <u>{moment(dueDate).format("YYYY-MM-DD(dddd) hh:mm a")}.</u>
+          </li>
+        }
+
+        { !dueDate ?
+          null :
+          <li>
+            <strong>Time Left: </strong>
+            <u><RelativeDate dueDateString={dueDate}/></u>
           </li>
         }
 
@@ -64,10 +53,10 @@ function Requirements(props) {
           null :
           <li>
             <strong>Drafting Due Date: </strong>
-            <u>{draftDueDate}.</u>
+            <u>{moment(draftDueDate).format("YYYY-MM-DD(dddd) hh:mm a")}.</u>
           </li>
         }
-      </ol>
+      </ul>
     </div>
   );
 }

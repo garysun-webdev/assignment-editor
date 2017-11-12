@@ -13,12 +13,12 @@ const initialState = {
     wordLimit: 1000,
     gradeValue: 30,
     resources: [
-      { name: 'Hacker News', url: 'https://news.ycombinator.com', openDate: ''},
-      { name: 'Wikipedia', url: 'https://www.wikipedia.com', openDate: ''},
-      { name: 'Google', url: 'https://www.google.com.uk', openDate: ''},
-      { name: 'Facebook', url: 'https://www.facebook.com', openDate: ''},
-      { name: 'Twitter', url: 'https://www.twitter.com', openDate: ''},
-      { name: 'Instagram', url: 'https://www.nstagram.com', openDate: ''},
+      { name: 'Hacker News', url: 'https://news.ycombinator.com', openDate: 0},
+      { name: 'Wikipedia', url: 'https://www.wikipedia.com', openDate: 0},
+      { name: 'Google', url: 'https://www.google.com.uk', openDate: 0},
+      { name: 'Facebook', url: 'https://www.facebook.com', openDate: 0},
+      { name: 'Twitter', url: 'https://www.twitter.com', openDate: 0},
+      { name: 'Instagram', url: 'https://www.nstagram.com', openDate: 0},
       // Add more fake resources here
     ],
   },

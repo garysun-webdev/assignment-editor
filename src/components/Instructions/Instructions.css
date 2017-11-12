@@ -1,0 +1,7 @@
+.Instructions h2 {
+    font-size: 1.25rem;
+}
+
+.Instructions > div {
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,18 @@
+.Progress-item {
+  margin-right: 12px;
+  font-weight: 300;
+  font-size: 1.25em;
+  margin-left: 2em;
+  margin-top: 1.5em;
+}
+
+.Progress-item > label {
+  font-size: 0.625em;
+  margin-right: 4px;
+}
+
+.Progress-main {
+  padding-bottom: 250px;
+}
+
+

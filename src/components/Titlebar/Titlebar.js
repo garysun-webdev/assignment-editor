@@ -14,6 +14,8 @@ const style = {
 class Titlebar extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    wordCount: PropTypes.number.isRequired,
+    countListUpdate: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -62,7 +64,7 @@ class Titlebar extends Component {
         <div className="Titlebar-title">
           {this.props.title}
         </div>
-        <div>
+        <div className="Titlebar-wordcount">
           <label>current wordcount is </label>
           {this.props.wordCount}
         </div>
