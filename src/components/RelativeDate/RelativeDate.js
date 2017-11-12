@@ -37,7 +37,7 @@ class RelativeDate extends Component {
     }
 
     return(
-      <p>{this.setTimeFormat()}</p>
+      <div>{this.setTimeFormat()}</div>
     )
   }
 }

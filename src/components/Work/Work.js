@@ -17,21 +17,14 @@ class Work extends Component {
     this.updateWordCount = this.updateWordCount.bind(this);
   }
 
-  componentDidMount(){
-    this.updateWordCount();
-
-  }
-
-  updateWordCount(){
-    const words = this.props.editorValue._map._root.entries[1][1].text;
-    const wordList = words.trim().split(" ");
-    const wordCount = wordList.length-1;
-    this.props.onWordChange(wordCount);
-  }
-
   static propTypes = {
     editorValue: Types.value.isRequired,
     onChange: PropTypes.func.isRequired,
+  }
+
+  componentDidMount(){
+    this.updateWordCount();
+
   }
 
   keyUpHandler() {
@@ -41,23 +34,21 @@ class Work extends Component {
     }, 500)
   }
 
+  updateWordCount(){
+    const words = this.props.editorValue._map._root.entries[1][1].text;
+    const wordList = words.trim().split(" ");
+    const wordCount = wordList.length-1;
+    this.props.onWordChange(wordCount);
+  }
+
   render() {
-    //performance problem
-    const editorPlugin = {
-      onKeyUp: this.keyUpHandler
-    }
-
-    const plugins = [
-      editorPlugin
-    ]
-
     return (
       <div className="Work Paper">
         <Editor
           ref={(node) => { this.editor = node; }}
           value={this.props.editorValue}
-          //plugins={workPlugins}
-          plugins={plugins}
+          onKeyUp={this.keyUpHandler}
+          plugins={workPlugins}
           onChange={this.props.onChange}
           placeholder="Enter your assignment here..."
           spellCheck

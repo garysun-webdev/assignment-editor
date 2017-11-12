@@ -81,9 +81,9 @@ class Progress extends Component {
           <p>
             Time spent so far: {countData.length} min  
           </p>
-          <p>
+          
             Due in: <RelativeDate dueDateString={this.props.dueDate}/>
-          </p>
+          
           <p>
             Estimated finish time: in {finishTime} min
           </p>
