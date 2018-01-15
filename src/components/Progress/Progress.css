@@ -12,7 +12,6 @@
 }
 
 .Progress-main {
-  padding-bottom: 250px;
+  height: 100vh;
+  background: #eee;
 }
-
-

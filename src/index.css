@@ -19,7 +19,7 @@ body {
 }
 
 .Resizer::after {
-  content: '•';
+  content: "•";
   color: black;
   font-size: 2em;
 }
@@ -62,12 +62,13 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   background: white;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.09), 0 1px 2px 0 rgba(0,0,0,0.36);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.09), 0 1px 2px 0 rgba(0, 0, 0, 0.36);
   margin-left: -27px;
 }
 
 .Pane.Pane1 {
   overflow: auto;
+  /* background: #eee; */
 }
 
 /* Paper style */
@@ -97,7 +98,8 @@ body {
     list-style: decimal;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 36px;
   }
 
@@ -105,7 +107,8 @@ body {
     padding-bottom: 18px;
   }
 
-  p, div {
+  p,
+  div {
     font-size: 1em;
   }
 
@@ -122,7 +125,10 @@ body {
     margin: 24px 0px;
   }
 
-  h4, h5, h6, h7 {
+  h4,
+  h5,
+  h6,
+  h7 {
     color: inherit;
     margin: 24px 0px;
   }

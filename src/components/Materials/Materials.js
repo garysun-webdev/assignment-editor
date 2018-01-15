@@ -1,27 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Materials.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./Materials.css";
 
-import InstructionsWithState from '../../containers/InstructionsWithState';
-import ProgressWithState from '../../containers/ProgressWithState';
+import InstructionsWithState from "../../containers/InstructionsWithState";
+import ProgressWithState from "../../containers/ProgressWithState";
 
-function Materials({currentTag}) {
-  if(currentTag===0){
+function Materials({ currentTag }) {
+  if (currentTag === 0) {
     return (
       <div className="Materials">
         <InstructionsWithState />
       </div>
-    );  
+    );
   }
 
-  if(currentTag===1){
+  if (currentTag === 1) {
     return (
       <div className="Materials">
         <ProgressWithState />
       </div>
     );
   }
-  
 }
 
 Materials.propTypes = {
@@ -29,4 +28,3 @@ Materials.propTypes = {
 };
 
 export default Materials;
-

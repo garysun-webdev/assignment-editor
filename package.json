@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "chart.js": "^2.7.1",
+    "firebase": "^4.6.2",
     "immutable": "^3.8.2",
     "material-ui": "^0.19.4",
     "moment": "^2.19.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-addons-perf": "^15.4.2",
     "react-chartjs-2": "^2.6.4",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
@@ -17,6 +19,7 @@
     "react-scripts": "1.0.14",
     "react-split-pane": "^0.1.68",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "slate": "^0.30.6",
     "slate-prop-types": "^0.4.6",
     "slate-react": "^0.10.11"

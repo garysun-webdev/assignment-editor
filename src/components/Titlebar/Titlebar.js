@@ -62,7 +62,7 @@ class Titlebar extends Component {
     return (
       <div className="Titlebar">
         <div className="Titlebar-title">
-          {this.props.title}
+          Assignment Demo
         </div>
         <div className="Titlebar-wordcount">
           <label>current wordcount is </label>
